@@ -1,0 +1,75 @@
+<% include header %>
+<div class="container">
+<p class="lead">RestoView</p>
+<div class="row">
+    <div class="col-md-3">
+        <div class="list-group">
+            <li class="list-group-item active">Category 1</li>
+            <li class="list-group-item ">Category 2</li>
+            <li class="list-group-item ">Category 3</li>
+        </div>
+    </div>
+    <div class="col-md-9">
+        <div class="thumbnail">
+            <img src="<%=el.link%>">
+            <div class="caption-full caption"></div>
+            <div class="caption-full caption"></div>
+            <a>
+                <h4><%= el.name %></h4>
+            </a>
+            <%= el.description %>
+        </div>
+        <div class="well">
+            <div class="text-right"><a class="btn btn-success" href="/<%=el._id %>/comments">Add new comment</a></div>
+            <hr>
+            <% el.comments.forEach(function(com){ %>
+            <div class="row">
+                <div class="col-md-12">
+                    <strong><%= com.name %></strong>
+                    <span class="pull-right">Reviewed today</span>
+                    <p><%= com.comment %></p>
+                </div>
+            </div>
+            <% }) %>
+        </div>
+    </div>
+</div>
+</p>
+</html><% include header %>
+<div class="container">
+<p class="lead">RestoView</p>
+<div class="row">
+    <div class="col-md-3">
+        <div class="list-group">
+            <li class="list-group-item active">Category 1</li>
+            <li class="list-group-item ">Category 2</li>
+            <li class="list-group-item ">Category 3</li>
+        </div>
+    </div>
+    <div class="col-md-9">
+        <div class="thumbnail">
+            <img src="<%=el.link%>">
+            <div class="caption-full caption"></div>
+            <div class="caption-full caption"></div>
+            <a>
+                <h4><%= el.name %></h4>
+            </a>
+            <%= el.description %>
+        </div>
+        <div class="well">
+            <div class="text-right"><a class="btn btn-success" href="/<%=el._id %>/comments">Add new comment</a></div>
+            <hr>
+            <% el.comments.forEach(function(com){ %>
+            <div class="row">
+                <div class="col-md-12">
+                    <strong><%= com.name %></strong>
+                    <span class="pull-right">Reviewed today</span>
+                    <p><%= com.comment %></p>
+                </div>
+            </div>
+            <% }) %>
+        </div>
+    </div>
+</div>
+</p>
+</html>

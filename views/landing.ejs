@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Restoview</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+        <style>
+            body {
+            background-color: #000;
+            }
+            #landing-header {
+            z-index: 1;
+            position: relative;
+            text-align: center;
+            padding-top: 40vh;
+            }
+            #landing-header h1 {
+            color: #fff;
+            }
+            .slideshow { 
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 0;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            }
+            .slideshow li { 
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-size: cover;
+            background-position: 50% 50%;
+            background-repeat: no-repeat;
+            opacity: 0;
+            z-index: 0;
+            animation: imageAnimation 50s linear infinite; 
+            }
+            .slideshow li:nth-child(1) { 
+            background-image: url(/images/pizza.jpg) 
+            }
+            .slideshow li:nth-child(2) { 
+            background-image: url(/images/truffles.jpg);
+            animation-delay: 5s; 
+            }
+            .slideshow li:nth-child(3) { 
+            background-image: url(/images/food2.jpg);
+            animation-delay: 10s; 
+            }
+            .slideshow li:nth-child(4) { 
+            background-image: url(/images/food1.jpg);
+            animation-delay: 15s; 
+            }
+            .slideshow li:nth-child(5) { 
+            background-image: url(/images/dessert.jpg);
+            animation-delay: 20s; 
+            }
+            @keyframes imageAnimation { 
+            0% { 
+            opacity: 0; 
+            animation-timing-function: ease-in;
+            }
+            10% {
+            opacity: 1;
+            animation-timing-function: ease-out;
+            }
+            20% {
+            opacity: 1
+            }
+            30% {
+            opacity: 0
+            }
+            }
+            .no-cssanimations .slideshow li {
+            opacity: 1;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="landing-header">
+            <h1 font-style="Verdana" height="40px">Restoview!</h1>
+            <h4 style="color:white;">Find Places worthy to eat</h4>
+            <a href="/restoview" class="btn btn-lg btn-success">View All Restaurants</a>
+        </div>
+        <ul class="slideshow">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" type="text/javascript" async></script>
+    </body>
+</html>

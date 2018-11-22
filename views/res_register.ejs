@@ -1,0 +1,19 @@
+<% include header%>
+<div class="container">
+    <div class="row">
+        <h1 style="text-align:center">Register Your restaurant</h1>
+        <div style="width:30%;margin:25px auto">
+            <form action="/res_register" method="POST">
+                <div class="form-group"><input class="form-control" type="text" placeholder="Name" name="a[name]"></div>
+                <div class="form-group"><input class="form-control" type="text" placeholder="link" name="a[link]"></div>
+                <div class="form-group"><input class="form-control" type="text" placeholder="Description" name="a[description]"></div>
+                <div class="form-group"><input class="form-control" type="text" value="created by <%=currentUser.name%>" name="a[created]"></div>
+                <div class="form-group"><button class="btn btn-primary btn-lg btn-block">Submit</button></div>
+            </form>
+            <a href="/">Go back</a>
+        </div>
+    </div>
+</div>
+<%include footer%>
+</body>
+</html>

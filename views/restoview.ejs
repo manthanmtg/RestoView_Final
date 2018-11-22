@@ -1,0 +1,34 @@
+<% include header %>
+<header height="40px">
+    <div class="container ">
+        <div class="jumbotron" style="background-image:url(images/pizza.jpg); background-size: cover;">
+            <div class="container">
+                <h1 style="font-family: 'Montez', cursive; color: azure"><i class="fas fa-utensils"></i> RestoView!</h1>
+                <h4 style="font-family: 'Montez', cursive;color: azure; font-size: 2em;">Discover places worthy to eat</h4>
+            </div>
+        </div>
+    </div>
+</header>
+<div class="container">
+    <div align="center">
+        <div class="row text-center row-eq-height" style="display:flex;flex-wrap:wrap;">
+            <% restData.forEach(function(el) {%>
+            <div class="col-md-4 col-lg-4 col-sm-6">
+                <div class="thumbnail">
+                    <img src="<%=el.link %>"></img>
+                    <div class="caption">
+                        <h1 class="names"><%=el.name%></h1>
+                        <p><%= el.description %>
+                        </p>
+                        <a class="btn btn-success" href="https://test-workspace2-princeap173.c9users.io/<%=el.menu%>.php">Check Menu</a>
+                        <a class="btn btn-primary" href="/<%=el._id%>">Rate and review</a>
+                    </div>
+                </div>
+            </div>
+            <% }); %>
+        </div>
+    </div>
+</div>
+<%include footer%>
+</body>
+</html>
